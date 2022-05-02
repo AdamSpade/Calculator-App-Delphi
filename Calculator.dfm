@@ -22,9 +22,6 @@ object Form1: TForm1
     Color = clGray
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = -16
-    ExplicitWidth = 409
-    ExplicitHeight = 423
     DesignSize = (
       369
       349)
@@ -59,7 +56,6 @@ object Form1: TForm1
       ParentFont = False
       TabOrder = 1
       OnClick = Button1Click
-      ExplicitTop = 237
     end
     object Button2: TButton
       Left = 91
@@ -76,7 +72,6 @@ object Form1: TForm1
       ParentFont = False
       TabOrder = 2
       OnClick = Button2Click
-      ExplicitTop = 237
     end
     object Button3: TButton
       Left = 160
@@ -92,7 +87,7 @@ object Form1: TForm1
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 3
-      ExplicitTop = 237
+      OnClick = Button3Click
     end
     object Button4: TButton
       Left = 24
@@ -108,7 +103,7 @@ object Form1: TForm1
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 4
-      ExplicitTop = 172
+      OnClick = Button4Click
     end
     object Button5: TButton
       Left = 91
@@ -124,7 +119,7 @@ object Form1: TForm1
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 5
-      ExplicitTop = 172
+      OnClick = Button5Click
     end
     object Button6: TButton
       Left = 160
@@ -140,7 +135,7 @@ object Form1: TForm1
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 6
-      ExplicitTop = 172
+      OnClick = Button6Click
     end
     object Button0: TButton
       Left = 24
@@ -157,7 +152,6 @@ object Form1: TForm1
       ParentFont = False
       TabOrder = 7
       OnClick = Button0Click
-      ExplicitTop = 301
     end
     object Button7: TButton
       Left = 24
@@ -173,7 +167,7 @@ object Form1: TForm1
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 8
-      ExplicitTop = 108
+      OnClick = Button7Click
     end
     object Button8: TButton
       Left = 91
@@ -189,7 +183,7 @@ object Form1: TForm1
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 9
-      ExplicitTop = 108
+      OnClick = Button8Click
     end
     object Button9: TButton
       Left = 160
@@ -205,7 +199,7 @@ object Form1: TForm1
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 10
-      ExplicitTop = 108
+      OnClick = Button9Click
     end
     object ButtonDecimal: TButton
       Left = 160
@@ -221,7 +215,7 @@ object Form1: TForm1
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 11
-      ExplicitTop = 301
+      OnClick = ButtonDecimalClick
     end
     object ButtonDivide: TButton
       Left = 229
@@ -237,7 +231,7 @@ object Form1: TForm1
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 12
-      ExplicitTop = 108
+      OnClick = ButtonDivideClick
     end
     object ButtonMultiply: TButton
       Left = 229
@@ -253,7 +247,7 @@ object Form1: TForm1
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 13
-      ExplicitTop = 172
+      OnClick = ButtonMultiplyClick
     end
     object ButtonSubtract: TButton
       Left = 229
@@ -269,7 +263,7 @@ object Form1: TForm1
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 14
-      ExplicitTop = 237
+      OnClick = ButtonSubtractClick
     end
     object ButtonAdd: TButton
       Left = 229
@@ -285,7 +279,7 @@ object Form1: TForm1
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 15
-      ExplicitTop = 301
+      OnClick = ButtonAddClick
     end
     object ButtonClear: TButton
       Left = 296
@@ -302,7 +296,6 @@ object Form1: TForm1
       ParentFont = False
       TabOrder = 16
       OnClick = ButtonClearClick
-      ExplicitTop = 108
     end
     object ButtonEquals: TButton
       Left = 296
@@ -318,7 +311,7 @@ object Form1: TForm1
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 17
-      ExplicitTop = 237
+      OnClick = ButtonEqualsClick
     end
   end
 end

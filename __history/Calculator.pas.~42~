@@ -234,12 +234,11 @@ begin
     Edit1.Text:= '0';
 end;
 
-//procedure TForm1.ButtonPercentClick(Sender: TObject);
-//begin
-//  Operand1:= Edit1.Text;
-//
-//
-//end;
+{ Percentage Button }
+procedure TForm1.ButtonPercentClick(Sender: TObject);
+begin
+  Edit1.Text:= FloatToStr((StrToFloat(Edit1.Text)) *10 / 100);
+end;
 
 { Plus/Minus Button }
 procedure TForm1.ButtonPlusMinusClick(Sender: TObject);

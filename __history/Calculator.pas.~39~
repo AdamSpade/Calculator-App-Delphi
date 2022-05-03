@@ -49,6 +49,7 @@ type
     procedure ButtonEqualsClick(Sender: TObject);
     procedure ButtonBackspaceClick(Sender: TObject);
     procedure ButtonPlusMinusClick(Sender: TObject);
+    procedure ButtonPercentClick(Sender: TObject);
   private
     { Private declarations }
     Operand1 : String;
@@ -233,6 +234,12 @@ begin
     Edit1.Text:= '0';
 end;
 
+procedure TForm1.ButtonPercentClick(Sender: TObject);
+begin
+  Edit1.Text:= FloatToStr(StrToFloat(Edit1.Text) / 100);
+end;
+
+{ Plus/Minus Button }
 procedure TForm1.ButtonPlusMinusClick(Sender: TObject);
 var pMinus : Real;
 begin

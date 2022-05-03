@@ -27,6 +27,7 @@ type
     ButtonAdd: TButton;
     ButtonClear: TButton;
     ButtonEquals: TButton;
+    ButtonDelete: TButton;
     procedure ButtonClearClick(Sender: TObject);
     procedure Button0Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
@@ -43,6 +44,7 @@ type
     procedure ButtonSubtractClick(Sender: TObject);
     procedure ButtonMultiplyClick(Sender: TObject);
     procedure ButtonDivideClick(Sender: TObject);
+    procedure ButtonEqualsClick(Sender: TObject);
   private
     { Private declarations }
     Operand1 : String;
@@ -203,4 +205,20 @@ begin
 end;
 
 { Equal Button }
+procedure TForm1.ButtonEqualsClick(Sender: TObject);
+begin
+  Operand2:= Edit1.Text;
+  case(Operators) of
+    '+':
+      Answer:= FloatToStr(StrToFloat(Operand1) + StrToFloat(Operand2));
+    '-':
+      Answer:= FloatToStr(StrToFloat(Operand1) - StrToFloat(Operand2));
+    'x':
+      Answer:= FloatToStr(StrToFloat(Operand1) * StrToFloat(Operand2));
+    '/':
+      Answer:= FloatToStr(StrToFloat(Operand1) / StrToFloat(Operand2));
+  end;
+  Edit1.Text:= Answer;
+end;
+
 end.

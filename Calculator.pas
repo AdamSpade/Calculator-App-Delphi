@@ -27,6 +27,9 @@ type
     ButtonAdd: TButton;
     ButtonClear: TButton;
     ButtonEquals: TButton;
+    ButtonBackspace: TButton;
+    ButtonPercent: TButton;
+    ButtonPlusMinus: TButton;
     procedure ButtonClearClick(Sender: TObject);
     procedure Button0Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
@@ -44,6 +47,9 @@ type
     procedure ButtonMultiplyClick(Sender: TObject);
     procedure ButtonDivideClick(Sender: TObject);
     procedure ButtonEqualsClick(Sender: TObject);
+    procedure ButtonBackspaceClick(Sender: TObject);
+    procedure ButtonPlusMinusClick(Sender: TObject);
+    procedure ButtonPercentClick(Sender: TObject);
   private
     { Private declarations }
     Operand1 : String;
@@ -187,8 +193,8 @@ begin
   Edit1.Text:= '0';
 end;
 
-{ Calculator Function Buttons}
-{ Clear Button}
+{ Calculator Function Buttons }
+{ Clear Button }
 procedure TForm1.ButtonClearClick(Sender: TObject);
 begin
   Edit1.Text:= '0';
@@ -218,6 +224,27 @@ begin
       Answer:= FloatToStr(StrToFloat(Operand1) / StrToFloat(Operand2));
   end;
   Edit1.Text:= Answer;
+end;
+
+{ Backspace Button }
+procedure TForm1.ButtonBackspaceClick(Sender: TObject);
+begin
+  Edit1.Text:= Copy(Edit1.Text, 1, length(Edit1.Text)-1);
+  if Edit1.Text = '' then
+    Edit1.Text:= '0';
+end;
+
+procedure TForm1.ButtonPercentClick(Sender: TObject);
+begin
+  Edit1.Text:= FloatToStr(StrToFloat(Edit1.Text) / 100);
+end;
+
+{ Plus/Minus Button }
+procedure TForm1.ButtonPlusMinusClick(Sender: TObject);
+var pMinus : Real;
+begin
+  pMinus:= StrToFloat(Edit1.Text);
+  Edit1.Text:= FloatToStr(-1 * pMinus);
 end;
 
 end.

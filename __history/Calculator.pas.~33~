@@ -27,6 +27,9 @@ type
     ButtonAdd: TButton;
     ButtonClear: TButton;
     ButtonEquals: TButton;
+    ButtonBackspace: TButton;
+    ButtonPercent: TButton;
+    Button10: TButton;
     procedure ButtonClearClick(Sender: TObject);
     procedure Button0Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
@@ -44,6 +47,7 @@ type
     procedure ButtonMultiplyClick(Sender: TObject);
     procedure ButtonDivideClick(Sender: TObject);
     procedure ButtonEqualsClick(Sender: TObject);
+    procedure ButtonBackspaceClick(Sender: TObject);
   private
     { Private declarations }
     Operand1 : String;
@@ -187,8 +191,8 @@ begin
   Edit1.Text:= '0';
 end;
 
-{ Calculator Function Buttons}
-{ Clear Button}
+{ Calculator Function Buttons }
+{ Clear Button }
 procedure TForm1.ButtonClearClick(Sender: TObject);
 begin
   Edit1.Text:= '0';
@@ -211,13 +215,19 @@ begin
     '+':
       Answer:= FloatToStr(StrToFloat(Operand1) + StrToFloat(Operand2));
     '-':
-      Answer:= FloatToStr(StrToFloat(Operand1) + StrToFloat(Operand2));
+      Answer:= FloatToStr(StrToFloat(Operand1) - StrToFloat(Operand2));
     'x':
-      Answer:= FloatToStr(StrToFloat(Operand1) + StrToFloat(Operand2));
+      Answer:= FloatToStr(StrToFloat(Operand1) * StrToFloat(Operand2));
     '/':
-      Answer:= FloatToStr(StrToFloat(Operand1) + StrToFloat(Operand2));
+      Answer:= FloatToStr(StrToFloat(Operand1) / StrToFloat(Operand2));
   end;
   Edit1.Text:= Answer;
+end;
+
+{ Backspace Button }
+procedure TForm1.ButtonBackspaceClick(Sender: TObject);
+begin
+  Edit1.Text:= Copy(Edit1.Text, 1, length(Edit1.Text)-1);
 end;
 
 end.
